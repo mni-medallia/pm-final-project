@@ -1,11 +1,7 @@
-# Strategic Discovery Map
-
-> **Module 1 · Lab 1.** Repo file `01-product-thinking/strategic-map.md` — part of your submission.
-> Do the lab in the **Module 1 · Exercise 1 Guide** (linked from the Module 1 deck), then click **⬇ Download .md** — it saves as this exact file. Commit it here.
-> It's the discovery groundwork behind your `problem-hook.md`.
+# Strategic Discovery Map (Module 1)
 
 ## Responses
-
-- **Feature with no strategic answer (why is this a 12-week priority?):** _(not filled in)_
-- **Feature that looks "correct" but has zero strategic weight:** _(not filled in)_
-- **V3 vs your Step 1 baseline — what changed, and was it your PM knowledge that forced usefulness?:** _(not filled in)_
+- **Write one feature from the map that, if an engineer asked “why is this a priority for our 12-week roadmap?”, you honestly could not give a strategic answer for.:** I would defer Health-platform integration entirely from the MVP. It has minimal impact on the drink loop or revenue. In addition, it increases engineering cost and compliance complexity. The goal for the first 12 weeks is to create a log-a-drink loop to promote habit formation.
+- **Write one feature that looks “correct” for the app but has zero strategic weight, you have no idea if it helps the company make money or whether a single user actually asked for it.:** Smart bottle integration. It sounds like a must-have feature for a hydration app, but no user has asked for it and I can't tie it to revenue. Smart bottle owners make up a small market size, and their bottles already come with vendor apps for tracking. We'd also be reliant on third-party hardware manufacturer's roadmap, API access, and data permission. And they have no incentives to help an unestablished app.
+- **Compare V3 to your Step 1 baseline. What changed, and is the output objectively better, did the AI get smarter, or did your added PM knowledge (JTBD, effort/impact, retention) force it to be useful?:** Step 1 produced a simple list of features, V3 organized ideas into five branches as instructed, JTBD, Friction points, Feature ideas, Monetization, Retention risks. It also provided an Effort vs Impact matrix to sequence the build order. That made the output more useful. The AI didn't get smarter because the improvement came from the PM thinking and framework in the prompt.
+- **Key takeaway: how does this prove the PM’s role is to think while the AI’s role is to execute?:** AI is efficient at generating and synthesizing ideas but the PM must provide context and strategic focus to move in the right direction. In the end, the PM makes the decisions and is accountable for the outcome.
