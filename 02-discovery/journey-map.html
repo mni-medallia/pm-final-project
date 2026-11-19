@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Future-State Journey: The Fleet Dispatcher | RouteLogic Velocity</title>
+<style>
+  :root { --ink:#1f1f1d; --muted:#5f5e5a; --line:#d3d1c7; --teal:#0f6e56; --teal-bg:#e1f5ee; --teal-ink:#085041; --coral:#993c1d; --coral-bg:#faece7; --coral-ink:#712b13; }
+  * { box-sizing:border-box; }
+  body { margin:0; font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif; color:var(--ink); background:#fafaf7; line-height:1.55; }
+  main { max-width:980px; margin:0 auto; padding:40px 24px 56px; }
+  h1 { font-size:28px; font-weight:600; margin:0 0 6px; }
+  h2 { font-size:19px; font-weight:600; margin:36px 0 14px; }
+  .sub { color:var(--muted); margin:0 0 20px; }
+  .meta { display:grid; grid-template-columns:repeat(auto-fit,minmax(260px,1fr)); gap:12px; }
+  .meta div { background:#fff; border:1px solid var(--line); border-radius:10px; padding:12px 14px; font-size:14px; }
+  .meta b { display:block; font-size:12px; text-transform:uppercase; letter-spacing:.04em; color:var(--muted); margin-bottom:2px; }
+  .timeline { background:#fff; border:1px solid var(--line); border-radius:12px; padding:16px; }
+  .timeline svg { width:100%; height:auto; display:block; }
+  .stages { display:grid; grid-template-columns:repeat(auto-fit,minmax(210px,1fr)); gap:14px; padding:0; margin:0; list-style:none; counter-reset:s; }
+  .stage { background:#fff; border:1px solid var(--line); border-top:4px solid var(--teal); border-radius:0 0 10px 10px; padding:14px 16px; font-size:14px; }
+  .stage h3 { margin:0 0 10px; font-size:16px; font-weight:600; }
+  .stage h3::before { counter-increment:s; content:counter(s) ". "; color:var(--teal); }
+  .stage dt { font-size:12px; text-transform:uppercase; letter-spacing:.04em; color:var(--muted); margin-top:10px; }
+  .stage dd { margin:2px 0 0; }
+  .pain { background:var(--coral-bg); color:var(--coral-ink); border-radius:6px; padding:6px 8px; }
+  .adv { padding-left:20px; }
+  .adv li { margin-bottom:8px; }
+  .note { font-size:13px; color:var(--muted); margin-top:32px; border-top:1px solid var(--line); padding-top:14px; }
+</style>
+</head>
+<body>
+<main>
+  <h1>Future-state journey: The Fleet Dispatcher</h1>
+  <p class="sub">RouteLogic Velocity · Module 2 journey map</p>
+
+  <div class="meta">
+    <div><b>Goal</b>Get route changes to drivers right away and see accurate stop status, so the operation runs from one source of truth.</div>
+    <div><b>Today's workaround</b>A WhatsApp group the team calls "the real system" (UXR-02), plus phone calls and manual board reconciliation.</div>
+    <div><b>Strategy</b>Reclaim operational simplicity by stripping away legacy noise and making the tool the fastest option for everyday work.</div>
+  </div>
+
+  <h2>Timeline</h2>
+  <div class="timeline">
+    <svg viewBox="0 0 680 250" role="img" aria-labelledby="t d">
+      <title id="t">Future-state journey timeline</title>
+      <desc id="d">Four stages from reassigning a route to closing the day, each paired with the pain point it removes.</desc>
+      <defs><marker id="a" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto"><path d="M2 1L8 5L2 9" fill="none" stroke="#888780" stroke-width="1.5"/></marker></defs>
+      <g font-family="inherit" text-anchor="middle">
+        <g fill="#e1f5ee" stroke="#0f6e56" stroke-width="1">
+          <rect x="20" y="20" width="145" height="60" rx="8"/><rect x="190" y="20" width="145" height="60" rx="8"/><rect x="360" y="20" width="145" height="60" rx="8"/><rect x="530" y="20" width="145" height="60" rx="8"/>
+        </g>
+        <g fill="#085041" font-size="15" font-weight="600">
+          <text x="92" y="45">Reassign</text><text x="262" y="45">Driver notified</text><text x="432" y="45">Live status</text><text x="602" y="45">Close the day</text>
+        </g>
+        <g fill="#0f6e56" font-size="12.5">
+          <text x="92" y="66">One edit on board</text><text x="262" y="66">Push in seconds</text><text x="432" y="66">Board updates live</text><text x="602" y="66">No reconciling</text>
+        </g>
+        <g stroke="#888780" stroke-width="1.2" marker-end="url(#a)">
+          <line x1="166" y1="50" x2="187" y2="50"/><line x1="336" y1="50" x2="357" y2="50"/><line x1="506" y1="50" x2="527" y2="50"/>
+        </g>
+        <g stroke="#b4b2a9" stroke-dasharray="3 3">
+          <line x1="92" y1="80" x2="92" y2="120"/><line x1="262" y1="80" x2="262" y2="120"/><line x1="432" y1="80" x2="432" y2="120"/><line x1="602" y1="80" x2="602" y2="120"/>
+        </g>
+        <g fill="#faece7" stroke="#993c1d" stroke-width="1" stroke-dasharray="4 3">
+          <rect x="20" y="120" width="145" height="60" rx="8"/><rect x="190" y="120" width="145" height="60" rx="8"/><rect x="360" y="120" width="145" height="60" rx="8"/><rect x="530" y="120" width="145" height="60" rx="8"/>
+        </g>
+        <g fill="#712b13" font-size="15" font-weight="600">
+          <text x="92" y="145">Double entry</text><text x="262" y="145">8–15 min delay</text><text x="432" y="145">20–60 min lag</text><text x="602" y="145">Manual cleanup</text>
+        </g>
+        <g fill="#993c1d" font-size="12.5">
+          <text x="92" y="166">WhatsApp retyping</text><text x="262" y="166">BUG-2044</text><text x="432" y="166">BUG-2072</text><text x="602" y="166">Gaps in reports</text>
+        </g>
+      </g>
+      <rect x="20" y="212" width="14" height="14" rx="3" fill="#e1f5ee" stroke="#0f6e56"/>
+      <text x="42" y="223" font-size="12.5" fill="#5f5e5a">Future-state stage</text>
+      <rect x="180" y="212" width="14" height="14" rx="3" fill="#faece7" stroke="#993c1d" stroke-dasharray="3 2"/>
+      <text x="202" y="223" font-size="12.5" fill="#5f5e5a">Pain point removed</text>
+    </svg>
+  </div>
+
+  <h2>Stages</h2>
+  <ol class="stages">
+    <li class="stage"><h3>Reassign the route</h3><dl>
+      <dt>User action</dt><dd>Drags stops to a new driver on the board → change is saved in one step.</dd>
+      <dt>Internal state</dt><dd>Confident the board is the only place to make the change.</dd>
+      <dt>Pain point addressed</dt><dd class="pain">Retyping changes into WhatsApp → one entry, no copy errors.</dd></dl></li>
+    <li class="stage"><h3>Driver notified</h3><dl>
+      <dt>User action</dt><dd>Sees a "received by driver" check within seconds → no follow-up calls.</dd>
+      <dt>Internal state</dt><dd>Reassured the driver will turn before going the wrong way.</dd>
+      <dt>Pain point addressed</dt><dd class="pain">8–15 min delay, no push (BUG-2044) → instant push notification.</dd></dl></li>
+    <li class="stage"><h3>Live stop status</h3><dl>
+      <dt>User action</dt><dd>Glances at the board for stop status → answers customers immediately.</dd>
+      <dt>Internal state</dt><dd>Trusts the board again ("in progress" really means in progress).</dd>
+      <dt>Pain point addressed</dt><dd class="pain">20–60 min status lag (BUG-2072) → status updates in near real time.</dd></dl></li>
+    <li class="stage"><h3>Close the day</h3><dl>
+      <dt>User action</dt><dd>Reviews completed stops on the board → no reconciling against chat threads.</dd>
+      <dt>Internal state</dt><dd>In control; the WhatsApp group goes quiet.</dd>
+      <dt>Pain point addressed</dt><dd class="pain">Manual reconciliation and report gaps → complete, timestamped delivery record.</dd></dl></li>
+  </ol>
+
+  <h2>Competitive advantages over the manual workaround</h2>
+  <ol class="adv">
+    <li><b>Enter once, reach everyone</b> → one change updates both the driver and the board.</li>
+    <li><b>Structured, timestamped record</b> → feeds the reporting enterprises bought, which WhatsApp can't provide.</li>
+    <li><b>Scales safely</b> → push alerts replace chat-reading while driving, whatever the fleet size.</li>
+  </ol>
+
+  <p class="note">Evidence: UXR-02, UXR-09, BUG-2044, BUG-2072. The "received by driver" check and "within seconds" timing are design targets, not research findings.</p>
+</main>
+</body>
+</html>
